@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sabyx.quizapp.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="121dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/harry" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harry Potter Quiz"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:shadowRadius="10"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What's the name of the sport that is played at Hogwarts and includes flying brooms, Budgers and The Golden Snitch?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"/>
+
+                <CheckBox
+                    android:id="@+id/question1_answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Horcrux"
+                    android:onClick="setQuestion1Answer1"
+                    />
+
+                <CheckBox
+                    android:id="@+id/question1_answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pensive"
+                    android:onClick="setQuestion1Answer2"
+                    />
+
+                <CheckBox
+                    android:id="@+id/question1_answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quaffle"
+                    android:onClick="setQuestion1Answer3"
+                    />
+
+                <CheckBox
+                    android:id="@+id/question1_answer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quidditch"
+                    android:onClick="setQuestion1Answer4"
+                    />
+
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Harry Potter becomes a member of which house at Hogwarts?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <CheckBox
+                android:id="@+id/question2_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Slytherin"
+                android:onClick="setQuestion2Answer1"
+                />
+
+            <CheckBox
+                android:id="@+id/question2_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gryffindor"
+                android:onClick="setQuestion2Answer2"
+                />
+
+            <CheckBox
+                android:id="@+id/question2_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hufflepuff"
+                android:onClick="setQuestion2Answer3"
+                />
+
+            <CheckBox
+                android:id="@+id/question2_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ravenclaw"
+                android:onClick="setQuestion2Answer4"
+                />
+
+            <TextView
+                android:id="@+id/question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Harry Potter eventualy marries who?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/question3_answer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cho Chang"
+                    android:onClick="resetCorrectAnswer"/>
+
+                <RadioButton
+                    android:id="@+id/question3_answer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hermione Granger"
+                    android:onClick="resetCorrectAnswer"/>
+
+                <RadioButton
+                    android:id="@+id/question3_answer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ginny Weasley"
+                    android:onClick="setQuestion3Answer3"/>
+
+                <RadioButton
+                    android:id="@+id/question3_answer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luna Lovegood"
+                    android:onClick="resetCorrectAnswer"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/question4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Professor Dumbledore dies in which movie?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <CheckBox
+                android:id="@+id/question4_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Half-Blood Prince"
+                android:onClick="setQuestion4Answer1"
+                />
+
+            <CheckBox
+                android:id="@+id/question4_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deathly Hallows Part 1"
+                android:onClick="setQuestion4Answer2"
+                />
+
+            <CheckBox
+                android:id="@+id/question4_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deathly Hallows Part 2"
+                android:onClick="setQuestion4Answer3"
+                />
+
+            <CheckBox
+                android:id="@+id/question4_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order of the Phoenix"
+                android:onClick="setQuestion4Answer4"
+                />
+
+            <TextView
+                android:id="@+id/question5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. What is the name of Harry Potter's father?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <CheckBox
+                android:id="@+id/question5_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="William Potter"
+                android:onClick="setQuestion5Answer1"
+                />
+
+            <CheckBox
+                android:id="@+id/question5_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="James Potter"
+                android:onClick="setQuestion5Answer2"
+                />
+
+            <CheckBox
+                android:id="@+id/question5_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kingsley Potter"
+                android:onClick="setQuestion5Answer3"
+                />
+
+            <CheckBox
+                android:id="@+id/question5_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Arthur Potter"
+                android:onClick="setQuestion5Answer4"
+                />
+
+            <TextView
+                android:id="@+id/question6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6. Which of these are Harry Potter's friends?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <CheckBox
+                android:id="@+id/question6_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hermione Granger"
+                android:onClick="setQuestion6Answer1"
+                />
+
+            <CheckBox
+                android:id="@+id/question6_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ron Weasley"
+                android:onClick="setQuestion6Answer2"
+                />
+
+            <CheckBox
+                android:id="@+id/question6_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Draco Malfoy"
+                android:onClick="setQuestion6Answer3"
+                />
+
+            <CheckBox
+                android:id="@+id/question6_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peter Pettigrew"
+                android:onClick="setQuestion6Answer4"
+                />
+
+            <TextView
+                android:id="@+id/question7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7. What was the name of Hagrid's pet Cerberus that guards the Philosopher's Stone?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <CheckBox
+                android:id="@+id/question7_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fang"
+                android:onClick="setQuestion7Answer1"
+                />
+
+            <CheckBox
+                android:id="@+id/question7_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fluffy"
+                android:onClick="setQuestion7Answer2"
+                />
+
+            <CheckBox
+                android:id="@+id/question7_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Norbbert"
+                android:onClick="setQuestion7Answer3"
+                />
+
+            <CheckBox
+                android:id="@+id/question7_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tenebrus"
+                android:onClick="setQuestion7Answer4"
+                />
+
+            <TextView
+                android:id="@+id/question8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8. What's the name of Ron Weasley's pet rat, that later turns out to be Peter Pettigrew?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <CheckBox
+                android:id="@+id/question8_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scabbers"
+                android:onClick="setQuestion8Answer1"
+                />
+
+            <CheckBox
+                android:id="@+id/question8_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hermes"
+                android:onClick="setQuestion8Answer2"
+                />
+
+            <CheckBox
+                android:id="@+id/question8_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Errol"
+                android:onClick="setQuestion8Answer3"
+                />
+
+            <CheckBox
+                android:id="@+id/question8_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pigwidgeon"
+                android:onClick="setQuestion8Answer4"
+                />
+
+            <TextView
+                android:id="@+id/question9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9. Who is the main villain in Harry Potter?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/question9_answer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:hint="Answer"/>
+
+            <TextView
+                android:id="@+id/question10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10. What was the name of Harry Potter's pet owl?"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"/>
+
+            <CheckBox
+                android:id="@+id/question10_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peeves"
+                android:onClick="setQuestion10Answer1"
+                />
+
+            <CheckBox
+                android:id="@+id/question10_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Errol"
+                android:onClick="setQuestion10Answer2"
+                />
+
+            <CheckBox
+                android:id="@+id/question10_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scabbers"
+                android:onClick="setQuestion10Answer3"
+                />
+
+            <CheckBox
+                android:id="@+id/question10_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hedwig"
+                android:onClick="setQuestion10Answer4"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="View Results"
+                android:onClick="wiewResults"
+                android:background="#455A64"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
